@@ -1,0 +1,44 @@
+{
+   "type": [
+        {
+            "name": "Location",
+            "package": "std_msgs",
+            "message": "String"
+        },
+        {
+            "name": "Float",
+            "package": "std_msgs",
+            "message": "Float64"
+        }
+    ],
+    "mode": [
+        {
+            "skill": "init_power",
+            "mode": "is_poweredon"
+        },
+        {
+            "skill": "safe_poweroff",
+            "mode": "is_poweredoff"
+        },
+        {
+            "skill": "standup",
+            "mode": "is_standing"
+        },
+        {
+            "skill": "sitdown",
+            "mode": "is_sitting"
+        },
+        {
+            "skill": "go_to",
+            "mode": "is_arrived"
+        },
+        {
+            "skill": "recharge",
+            "mode": "has_charged"
+        },
+        {
+            "skill": "take_picture",
+            "mode": "pic_taken"
+        }
+    ]
+}

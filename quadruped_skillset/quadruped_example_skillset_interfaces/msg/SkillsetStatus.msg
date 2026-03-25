@@ -1,0 +1,10 @@
+builtin_interfaces/Time stamp
+ResourceState[] resources
+SkillInitPowerStatus skill_init_power
+SkillSafePoweroffStatus skill_safe_poweroff
+SkillStandupStatus skill_standup
+SkillSitdownStatus skill_sitdown
+SkillGoToStatus skill_go_to
+SkillRechargeStatus skill_recharge
+SkillTakePictureStatus skill_take_picture
+string info
