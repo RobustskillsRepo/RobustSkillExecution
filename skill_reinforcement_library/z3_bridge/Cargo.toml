@@ -1,0 +1,10 @@
+[package]
+name = "z3_bridge"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[lib]
+name = "z3_bridge"
+path = "src/lib.rs"

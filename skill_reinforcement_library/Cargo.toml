@@ -1,0 +1,3 @@
+[workspace]
+members = ["z3_bridge", "sr_core"]
+resolver = "2"

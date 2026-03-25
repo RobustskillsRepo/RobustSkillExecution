@@ -1,0 +1,151 @@
+{
+  "version": "1.0",
+  "resources": [
+    {
+      "name": "motor_state",
+      "values": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "name": "spot_state",
+      "values": [
+        "Sitting",
+        "Standing"
+      ]
+    }
+  ],
+  "system_property_smt": "(=> motor_state__Off spot_state__Sitting)",
+  "skills": {
+    "go_to": {
+      "nominal_smt": "(and motor_state__On spot_state__Standing)",
+      "recoverable": [
+        {
+          "region_smt": "(and true\n\t(not motor_state__Off)\n\t(not spot_state__Standing)\n\tmotor_state__On\n\tspot_state__Sitting\n)",
+          "enablement_path": [
+            "standup"
+          ],
+          "cost": 1.0
+        },
+        {
+          "region_smt": "(and true\n\t(not motor_state__On)\n\t(not spot_state__Standing)\n\tmotor_state__Off\n\tspot_state__Sitting\n)",
+          "enablement_path": [
+            "init_power",
+            "standup"
+          ],
+          "cost": 2.0
+        }
+      ],
+      "unrecoverable_smt": "(and (not (and motor_state__On spot_state__Standing)) (=> motor_state__Off spot_state__Sitting) (not (or (and true\n\t(not motor_state__Off)\n\t(not spot_state__Standing)\n\tmotor_state__On\n\tspot_state__Sitting\n) (and true\n\t(not motor_state__On)\n\t(not spot_state__Standing)\n\tmotor_state__Off\n\tspot_state__Sitting\n))))"
+    },
+    "take_picture": {
+      "nominal_smt": "motor_state__On",
+      "recoverable": [
+        {
+          "region_smt": "(and true\n\tmotor_state__Off\n\t(not spot_state__Standing)\n\t(not motor_state__On)\n\tspot_state__Sitting\n)",
+          "enablement_path": [
+            "init_power"
+          ],
+          "cost": 1.0
+        }
+      ],
+      "unrecoverable_smt": "(and (not motor_state__On) (=> motor_state__Off spot_state__Sitting) (not (or (and true\n\tmotor_state__Off\n\t(not spot_state__Standing)\n\t(not motor_state__On)\n\tspot_state__Sitting\n))))"
+    },
+    "init_power": {
+      "nominal_smt": "(and motor_state__Off spot_state__Sitting)",
+      "recoverable": [
+        {
+          "region_smt": "(and true\n\t(not spot_state__Standing)\n\t(not motor_state__Off)\n\tmotor_state__On\n\tspot_state__Sitting\n)",
+          "enablement_path": [
+            "safe_poweroff"
+          ],
+          "cost": 1.0
+        },
+        {
+          "region_smt": "(and true\n\t(not motor_state__Off)\n\t(not spot_state__Sitting)\n\tmotor_state__On\n\tspot_state__Standing\n)",
+          "enablement_path": [
+            "sitdown",
+            "safe_poweroff"
+          ],
+          "cost": 2.0
+        }
+      ],
+      "unrecoverable_smt": "(and (not (and motor_state__Off spot_state__Sitting)) (=> motor_state__Off spot_state__Sitting) (not (or (and true\n\t(not spot_state__Standing)\n\t(not motor_state__Off)\n\tmotor_state__On\n\tspot_state__Sitting\n) (and true\n\t(not motor_state__Off)\n\t(not spot_state__Sitting)\n\tmotor_state__On\n\tspot_state__Standing\n))))"
+    },
+    "recharge": {
+      "nominal_smt": "spot_state__Sitting",
+      "recoverable": [
+        {
+          "region_smt": "(and true\n\tmotor_state__On\n\tspot_state__Standing\n\t(not spot_state__Sitting)\n\t(not motor_state__Off)\n)",
+          "enablement_path": [
+            "sitdown"
+          ],
+          "cost": 1.0
+        }
+      ],
+      "unrecoverable_smt": "(and (not spot_state__Sitting) (=> motor_state__Off spot_state__Sitting) (not (or (and true\n\tmotor_state__On\n\tspot_state__Standing\n\t(not spot_state__Sitting)\n\t(not motor_state__Off)\n))))"
+    },
+    "standup": {
+      "nominal_smt": "(and motor_state__On spot_state__Sitting)",
+      "recoverable": [
+        {
+          "region_smt": "(and true\n\t(not spot_state__Standing)\n\t(not motor_state__On)\n\tmotor_state__Off\n\tspot_state__Sitting\n)",
+          "enablement_path": [
+            "init_power"
+          ],
+          "cost": 1.0
+        },
+        {
+          "region_smt": "(and true\n\t(not motor_state__Off)\n\t(not spot_state__Sitting)\n\tmotor_state__On\n\tspot_state__Standing\n)",
+          "enablement_path": [
+            "sitdown"
+          ],
+          "cost": 1.0
+        }
+      ],
+      "unrecoverable_smt": "(and (not (and motor_state__On spot_state__Sitting)) (=> motor_state__Off spot_state__Sitting) (not (or (and true\n\t(not spot_state__Standing)\n\t(not motor_state__On)\n\tmotor_state__Off\n\tspot_state__Sitting\n) (and true\n\t(not motor_state__Off)\n\t(not spot_state__Sitting)\n\tmotor_state__On\n\tspot_state__Standing\n))))"
+    },
+    "safe_poweroff": {
+      "nominal_smt": "(and motor_state__On spot_state__Sitting)",
+      "recoverable": [
+        {
+          "region_smt": "(and true\n\t(not spot_state__Standing)\n\t(not motor_state__On)\n\tmotor_state__Off\n\tspot_state__Sitting\n)",
+          "enablement_path": [
+            "init_power"
+          ],
+          "cost": 1.0
+        },
+        {
+          "region_smt": "(and true\n\t(not motor_state__Off)\n\t(not spot_state__Sitting)\n\tmotor_state__On\n\tspot_state__Standing\n)",
+          "enablement_path": [
+            "sitdown"
+          ],
+          "cost": 1.0
+        }
+      ],
+      "unrecoverable_smt": "(and (not (and motor_state__On spot_state__Sitting)) (=> motor_state__Off spot_state__Sitting) (not (or (and true\n\t(not spot_state__Standing)\n\t(not motor_state__On)\n\tmotor_state__Off\n\tspot_state__Sitting\n) (and true\n\t(not motor_state__Off)\n\t(not spot_state__Sitting)\n\tmotor_state__On\n\tspot_state__Standing\n))))"
+    },
+    "sitdown": {
+      "nominal_smt": "(and motor_state__On spot_state__Standing)",
+      "recoverable": [
+        {
+          "region_smt": "(and true\n\t(not motor_state__Off)\n\t(not spot_state__Standing)\n\tmotor_state__On\n\tspot_state__Sitting\n)",
+          "enablement_path": [
+            "standup"
+          ],
+          "cost": 1.0
+        },
+        {
+          "region_smt": "(and true\n\t(not motor_state__On)\n\t(not spot_state__Standing)\n\tmotor_state__Off\n\tspot_state__Sitting\n)",
+          "enablement_path": [
+            "init_power",
+            "standup"
+          ],
+          "cost": 2.0
+        }
+      ],
+      "unrecoverable_smt": "(and (not (and motor_state__On spot_state__Standing)) (=> motor_state__Off spot_state__Sitting) (not (or (and true\n\t(not motor_state__Off)\n\t(not spot_state__Standing)\n\tmotor_state__On\n\tspot_state__Sitting\n) (and true\n\t(not motor_state__On)\n\t(not spot_state__Standing)\n\tmotor_state__Off\n\tspot_state__Sitting\n))))"
+    }
+  }
+}
