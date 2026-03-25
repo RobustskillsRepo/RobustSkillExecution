@@ -1,0 +1,38 @@
+
+ff: parsing domain file
+domain 'QUADRUPED_EXAMPLE' defined
+ ... done.
+ff: parsing problem file
+problem 'QUADRUPED_EXAMPLE_PROBLEM' defined
+ ... done.
+
+
+
+Cueing down from goal distance:    6 into depth [1]
+                                   5            [1][2][3]
+                                   4            [1]
+                                   3            [1][2]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: INIT_POWER
+        1: STANDUP
+        2: GO_TO L2 L0
+        3: TAKE_PICTURE L2
+        4: GO_TO L1 L2
+        5: SITDOWN
+        6: RECHARGE L1
+        7: STANDUP
+        8: GO_TO L0 L1
+     
+
+time spent:    0.00 seconds instantiating 17 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 11 facts and 17 actions
+               0.00 seconds creating final representation with 11 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 13 states, to a max depth of 3
+               0.00 seconds total time
+

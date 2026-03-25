@@ -1,0 +1,8 @@
+{
+  "steps": [
+    { "action": "init_power", "parameters": [] },
+    { "action": "standup", "parameters": [] },
+    { "action": "go_to", "parameters": ["L2"] },
+    { "action": "take_picture", "parameters": [] }
+  ]
+}

@@ -1,0 +1,19 @@
+ff: parsing domain file
+domain 'QUADRUPED_EXAMPLE' defined
+ ... done.
+ff: parsing problem file
+problem 'QUADRUPED_EXAMPLE_PROBLEM' defined
+ ... done.
+
+
+
+ff: found legal plan as follows (faulty: no STANDUP actions)
+
+step    0: INIT_POWER
+        1: GO_TO L2 L0
+        2: TAKE_PICTURE L2
+        3: GO_TO L1 L2
+        4: SITDOWN
+        5: RECHARGE L1
+        6: GO_TO L0 L1
+

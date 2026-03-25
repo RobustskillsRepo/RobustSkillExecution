@@ -1,0 +1,13 @@
+# Request: path to .ff plan file (absolute or relative to package share)
+string plan_ff_path
+# Optional: path to robust model JSON (overrides default)
+string robust_model_path
+---
+# True if plan completed successfully
+bool success
+# Escalation reason if failed: Impossible, Unrecoverable, RecoveryFailed, SkillFailed
+string failure_reason
+# Action that failed (if applicable)
+string failed_action
+# Configuration snapshot when failure occurred (JSON)
+string config

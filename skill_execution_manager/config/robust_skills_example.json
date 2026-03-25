@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "resources": [
+    { "name": "power_status", "values": ["on", "off"] },
+    { "name": "spot_state", "values": ["sit", "stand"] }
+  ],
+  "system_property_smt": "(=> power_status__off spot_state__sit)",
+  "skills": {
+    "standup": {
+      "nominal_smt": "(and power_status__on spot_state__sit)",
+      "unrecoverable_smt": "false",
+      "recoverable": []
+    },
+    "go_to": {
+      "nominal_smt": "(and power_status__on spot_state__stand)",
+      "unrecoverable_smt": "(and power_status__off spot_state__stand)",
+      "recoverable": [
+        {
+          "region_smt": "(and power_status__on spot_state__sit)",
+          "enablement_path": ["standup"],
+          "cost": 1.0
+        },
+        {
+          "region_smt": "(and power_status__off spot_state__sit)",
+          "enablement_path": ["init_power", "standup"],
+          "cost": 2.0
+        }
+      ]
+    }
+  }
+}
