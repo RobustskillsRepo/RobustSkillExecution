@@ -1,0 +1,515 @@
+{
+"run_id": "1772637570_205386", 
+"batch_type": "fault_injection", 
+"config": {
+        "executor": "manager",
+        "pddl_model_folder": 0,
+        "fault_injection_enabled": true,
+        "fault_injection_params": {
+            "inject_on_skill": "init_power",
+            "inject_event": "set_poweroff",
+            "inject_resource": "motor_state"
+        },
+        "skill_failure_mode": "none",
+        "skill_failure_target": ""
+    }, 
+"alterations": [{"type": "fault_injection", "value": {"inject_on_skill": "init_power", "inject_event": "set_poweroff", "inject_resource": "motor_state"}}], 
+"plan_initial": ["init_power", "standup", "go_to", "take_picture", "go_to", "sitdown", "recharge", "standup", "go_to", "sitdown", "safe_poweroff"], 
+"skill_executions": [
+    {"skill": "init_power", "success": true, "step_index": 0, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "take_picture", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "recharge", "success": true, "step_index": 5, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 6, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 8, "replan_index": 0}, 
+    {"skill": "safe_poweroff", "success": true, "step_index": 9, "replan_index": 0}], 
+"replans": [], 
+"robust_skills_triggered": [
+    {"skill": "init_power", "step_index": 1, "enablement_path": ["init_power"], "success": true}], 
+"outcome": {"success": true, "final_replan_count": 0, "reason": ""}, 
+"timestamp": "2026-03-04T16:19:30.205533Z", 
+"duration_sec": 29.356988668441772 
+}
+
+{
+"run_id": "1772637599_562436", 
+"batch_type": "fault_injection", 
+"config": {
+        "executor": "manager",
+        "pddl_model_folder": 0,
+        "fault_injection_enabled": true,
+        "fault_injection_params": {
+            "inject_on_skill": "init_power",
+            "inject_event": "set_sitting",
+            "inject_resource": "spot_state"
+        },
+        "skill_failure_mode": "none",
+        "skill_failure_target": ""
+    }, 
+"alterations": [{"type": "fault_injection", "value": {"inject_on_skill": "init_power", "inject_event": "set_sitting", "inject_resource": "spot_state"}}], 
+"plan_initial": ["init_power", "standup", "go_to", "take_picture", "go_to", "sitdown", "recharge", "standup", "go_to", "sitdown", "safe_poweroff"], 
+"skill_executions": [
+    {"skill": "init_power", "success": true, "step_index": 0, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "take_picture", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 5, "replan_index": 0}, 
+    {"skill": "recharge", "success": true, "step_index": 6, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 8, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 9, "replan_index": 0}, 
+    {"skill": "safe_poweroff", "success": true, "step_index": 10, "replan_index": 0}], 
+"replans": [], 
+"robust_skills_triggered": [], 
+"outcome": {"success": true, "final_replan_count": 0, "reason": ""}, 
+"timestamp": "2026-03-04T16:19:59.562524Z", 
+"duration_sec": 29.345600128173828 
+}
+
+{
+"run_id": "1772637628_907695", 
+"batch_type": "fault_injection", 
+"config": {
+        "executor": "manager",
+        "pddl_model_folder": 0,
+        "fault_injection_enabled": true,
+        "fault_injection_params": {
+            "inject_on_skill": "safe_poweroff",
+            "inject_event": "set_poweroff",
+            "inject_resource": "motor_state"
+        },
+        "skill_failure_mode": "none",
+        "skill_failure_target": ""
+    }, 
+"alterations": [{"type": "fault_injection", "value": {"inject_on_skill": "safe_poweroff", "inject_event": "set_poweroff", "inject_resource": "motor_state"}}], 
+"plan_initial": ["init_power", "standup", "go_to", "take_picture", "go_to", "sitdown", "recharge", "standup", "go_to", "sitdown", "safe_poweroff"], 
+"skill_executions": [
+    {"skill": "init_power", "success": true, "step_index": 0, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "take_picture", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 5, "replan_index": 0}, 
+    {"skill": "recharge", "success": true, "step_index": 6, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 8, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 9, "replan_index": 0}, 
+    {"skill": "safe_poweroff", "success": true, "step_index": 10, "replan_index": 0}], 
+"replans": [], 
+"robust_skills_triggered": [], 
+"outcome": {"success": true, "final_replan_count": 0, "reason": ""}, 
+"timestamp": "2026-03-04T16:20:28.907787Z", 
+"duration_sec": 29.33625841140747 
+}
+
+{
+"run_id": "1772637658_233494", 
+"batch_type": "fault_injection", 
+"config": {
+        "executor": "manager",
+        "pddl_model_folder": 0,
+        "fault_injection_enabled": true,
+        "fault_injection_params": {
+            "inject_on_skill": "safe_poweroff",
+            "inject_event": "set_sitting",
+            "inject_resource": "spot_state"
+        },
+        "skill_failure_mode": "none",
+        "skill_failure_target": ""
+    }, 
+"alterations": [{"type": "fault_injection", "value": {"inject_on_skill": "safe_poweroff", "inject_event": "set_sitting", "inject_resource": "spot_state"}}], 
+"plan_initial": ["init_power", "standup", "go_to", "take_picture", "go_to", "sitdown", "recharge", "standup", "go_to", "sitdown", "safe_poweroff"], 
+"skill_executions": [
+    {"skill": "init_power", "success": true, "step_index": 0, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "take_picture", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 5, "replan_index": 0}, 
+    {"skill": "recharge", "success": true, "step_index": 6, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 8, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 9, "replan_index": 0}, 
+    {"skill": "safe_poweroff", "success": true, "step_index": 10, "replan_index": 0}], 
+"replans": [], 
+"robust_skills_triggered": [], 
+"outcome": {"success": true, "final_replan_count": 0, "reason": ""}, 
+"timestamp": "2026-03-04T16:20:58.233532Z", 
+"duration_sec": 29.31679368019104 
+}
+
+{
+"run_id": "1772637687_797631", 
+"batch_type": "fault_injection", 
+"config": {
+        "executor": "manager",
+        "pddl_model_folder": 0,
+        "fault_injection_enabled": true,
+        "fault_injection_params": {
+            "inject_on_skill": "standup",
+            "inject_event": "set_poweroff",
+            "inject_resource": "motor_state"
+        },
+        "skill_failure_mode": "none",
+        "skill_failure_target": ""
+    }, 
+"alterations": [{"type": "fault_injection", "value": {"inject_on_skill": "standup", "inject_event": "set_poweroff", "inject_resource": "motor_state"}}], 
+"plan_initial": ["init_power", "standup", "go_to", "take_picture", "go_to", "sitdown", "recharge", "standup", "go_to", "sitdown", "safe_poweroff"], 
+"skill_executions": [
+    {"skill": "init_power", "success": true, "step_index": 0, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "take_picture", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "recharge", "success": true, "step_index": 5, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 6, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 8, "replan_index": 0}, 
+    {"skill": "safe_poweroff", "success": true, "step_index": 9, "replan_index": 0}], 
+"replans": [], 
+"robust_skills_triggered": [
+    {"skill": "init_power", "step_index": 2, "enablement_path": ["init_power", "standup"], "success": true}, 
+    {"skill": "standup", "step_index": 2, "enablement_path": ["init_power", "standup"], "success": true}], 
+"outcome": {"success": true, "final_replan_count": 0, "reason": ""}, 
+"timestamp": "2026-03-04T16:21:27.797791Z", 
+"duration_sec": 29.55781078338623 
+}
+
+{
+"run_id": "1772637717_547133", 
+"batch_type": "fault_injection", 
+"config": {
+        "executor": "manager",
+        "pddl_model_folder": 0,
+        "fault_injection_enabled": true,
+        "fault_injection_params": {
+            "inject_on_skill": "standup",
+            "inject_event": "set_sitting",
+            "inject_resource": "spot_state"
+        },
+        "skill_failure_mode": "none",
+        "skill_failure_target": ""
+    }, 
+"alterations": [{"type": "fault_injection", "value": {"inject_on_skill": "standup", "inject_event": "set_sitting", "inject_resource": "spot_state"}}], 
+"plan_initial": ["init_power", "standup", "go_to", "take_picture", "go_to", "sitdown", "recharge", "standup", "go_to", "sitdown", "safe_poweroff"], 
+"skill_executions": [
+    {"skill": "init_power", "success": true, "step_index": 0, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "take_picture", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "recharge", "success": true, "step_index": 5, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 6, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 8, "replan_index": 0}, 
+    {"skill": "safe_poweroff", "success": true, "step_index": 9, "replan_index": 0}], 
+"replans": [], 
+"robust_skills_triggered": [
+    {"skill": "standup", "step_index": 2, "enablement_path": ["standup"], "success": true}], 
+"outcome": {"success": true, "final_replan_count": 0, "reason": ""}, 
+"timestamp": "2026-03-04T16:21:57.547230Z", 
+"duration_sec": 29.73884344100952 
+}
+
+{
+"run_id": "1772637747_072987", 
+"batch_type": "fault_injection", 
+"config": {
+        "executor": "manager",
+        "pddl_model_folder": 0,
+        "fault_injection_enabled": true,
+        "fault_injection_params": {
+            "inject_on_skill": "sitdown",
+            "inject_event": "set_poweroff",
+            "inject_resource": "motor_state"
+        },
+        "skill_failure_mode": "none",
+        "skill_failure_target": ""
+    }, 
+"alterations": [{"type": "fault_injection", "value": {"inject_on_skill": "sitdown", "inject_event": "set_poweroff", "inject_resource": "motor_state"}}], 
+"plan_initial": ["init_power", "standup", "go_to", "take_picture", "go_to", "sitdown", "recharge", "standup", "go_to", "sitdown", "safe_poweroff"], 
+"skill_executions": [
+    {"skill": "init_power", "success": true, "step_index": 0, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "take_picture", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 5, "replan_index": 0}, 
+    {"skill": "recharge", "success": true, "step_index": 6, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 8, "replan_index": 0}, 
+    {"skill": "safe_poweroff", "success": true, "step_index": 9, "replan_index": 0}], 
+"replans": [], 
+"robust_skills_triggered": [
+    {"skill": "init_power", "step_index": 7, "enablement_path": ["init_power"], "success": true}], 
+"outcome": {"success": true, "final_replan_count": 0, "reason": ""}, 
+"timestamp": "2026-03-04T16:22:27.073089Z", 
+"duration_sec": 29.514530658721924 
+}
+
+{
+"run_id": "1772637776_458134", 
+"batch_type": "fault_injection", 
+"config": {
+        "executor": "manager",
+        "pddl_model_folder": 0,
+        "fault_injection_enabled": true,
+        "fault_injection_params": {
+            "inject_on_skill": "sitdown",
+            "inject_event": "set_sitting",
+            "inject_resource": "spot_state"
+        },
+        "skill_failure_mode": "none",
+        "skill_failure_target": ""
+    }, 
+"alterations": [{"type": "fault_injection", "value": {"inject_on_skill": "sitdown", "inject_event": "set_sitting", "inject_resource": "spot_state"}}], 
+"plan_initial": ["init_power", "standup", "go_to", "take_picture", "go_to", "sitdown", "recharge", "standup", "go_to", "sitdown", "safe_poweroff"], 
+"skill_executions": [
+    {"skill": "init_power", "success": true, "step_index": 0, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "take_picture", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 5, "replan_index": 0}, 
+    {"skill": "recharge", "success": true, "step_index": 6, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 8, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 9, "replan_index": 0}, 
+    {"skill": "safe_poweroff", "success": true, "step_index": 10, "replan_index": 0}], 
+"replans": [], 
+"robust_skills_triggered": [], 
+"outcome": {"success": true, "final_replan_count": 0, "reason": ""}, 
+"timestamp": "2026-03-04T16:22:56.458216Z", 
+"duration_sec": 29.374889135360718 
+}
+
+{
+"run_id": "1772637806_207429", 
+"batch_type": "fault_injection", 
+"config": {
+        "executor": "manager",
+        "pddl_model_folder": 0,
+        "fault_injection_enabled": true,
+        "fault_injection_params": {
+            "inject_on_skill": "go_to",
+            "inject_event": "set_poweroff",
+            "inject_resource": "motor_state"
+        },
+        "skill_failure_mode": "none",
+        "skill_failure_target": ""
+    }, 
+"alterations": [{"type": "fault_injection", "value": {"inject_on_skill": "go_to", "inject_event": "set_poweroff", "inject_resource": "motor_state"}}], 
+"plan_initial": ["init_power", "standup", "go_to", "take_picture", "go_to", "sitdown", "recharge", "standup", "go_to", "sitdown", "safe_poweroff"], 
+"skill_executions": [
+    {"skill": "init_power", "success": true, "step_index": 0, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "take_picture", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "recharge", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 5, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 6, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "safe_poweroff", "success": true, "step_index": 8, "replan_index": 0}], 
+"replans": [], 
+"robust_skills_triggered": [
+    {"skill": "init_power", "step_index": 3, "enablement_path": ["init_power"], "success": true}, 
+    {"skill": "standup", "step_index": 3, "enablement_path": ["standup"], "success": true}], 
+"outcome": {"success": true, "final_replan_count": 0, "reason": ""}, 
+"timestamp": "2026-03-04T16:23:26.207574Z", 
+"duration_sec": 29.738843202590942 
+}
+
+{
+"run_id": "1772637835_82368", 
+"batch_type": "fault_injection", 
+"config": {
+        "executor": "manager",
+        "pddl_model_folder": 0,
+        "fault_injection_enabled": true,
+        "fault_injection_params": {
+            "inject_on_skill": "go_to",
+            "inject_event": "set_sitting",
+            "inject_resource": "spot_state"
+        },
+        "skill_failure_mode": "none",
+        "skill_failure_target": ""
+    }, 
+"alterations": [{"type": "fault_injection", "value": {"inject_on_skill": "go_to", "inject_event": "set_sitting", "inject_resource": "spot_state"}}], 
+"plan_initial": ["init_power", "standup", "go_to", "take_picture", "go_to", "sitdown", "recharge", "standup", "go_to", "sitdown", "safe_poweroff"], 
+"skill_executions": [
+    {"skill": "init_power", "success": true, "step_index": 0, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "take_picture", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "recharge", "success": true, "step_index": 5, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 6, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 8, "replan_index": 0}, 
+    {"skill": "safe_poweroff", "success": true, "step_index": 9, "replan_index": 0}], 
+"replans": [], 
+"robust_skills_triggered": [
+    {"skill": "standup", "step_index": 4, "enablement_path": ["standup"], "success": true}], 
+"outcome": {"success": true, "final_replan_count": 0, "reason": ""}, 
+"timestamp": "2026-03-04T16:23:55.823839Z", 
+"duration_sec": 29.60542607307434 
+}
+
+{
+"run_id": "1772637865_278532", 
+"batch_type": "fault_injection", 
+"config": {
+        "executor": "manager",
+        "pddl_model_folder": 0,
+        "fault_injection_enabled": true,
+        "fault_injection_params": {
+            "inject_on_skill": "recharge",
+            "inject_event": "set_poweroff",
+            "inject_resource": "motor_state"
+        },
+        "skill_failure_mode": "none",
+        "skill_failure_target": ""
+    }, 
+"alterations": [{"type": "fault_injection", "value": {"inject_on_skill": "recharge", "inject_event": "set_poweroff", "inject_resource": "motor_state"}}], 
+"plan_initial": ["init_power", "standup", "go_to", "take_picture", "go_to", "sitdown", "recharge", "standup", "go_to", "sitdown", "safe_poweroff"], 
+"skill_executions": [
+    {"skill": "init_power", "success": true, "step_index": 0, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "take_picture", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 5, "replan_index": 0}, 
+    {"skill": "recharge", "success": true, "step_index": 6, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 8, "replan_index": 0}, 
+    {"skill": "safe_poweroff", "success": true, "step_index": 9, "replan_index": 0}], 
+"replans": [], 
+"robust_skills_triggered": [
+    {"skill": "init_power", "step_index": 7, "enablement_path": ["init_power"], "success": true}], 
+"outcome": {"success": true, "final_replan_count": 0, "reason": ""}, 
+"timestamp": "2026-03-04T16:24:25.278630Z", 
+"duration_sec": 29.444398641586304 
+}
+
+{
+"run_id": "1772637894_622536", 
+"batch_type": "fault_injection", 
+"config": {
+        "executor": "manager",
+        "pddl_model_folder": 0,
+        "fault_injection_enabled": true,
+        "fault_injection_params": {
+            "inject_on_skill": "recharge",
+            "inject_event": "set_sitting",
+            "inject_resource": "spot_state"
+        },
+        "skill_failure_mode": "none",
+        "skill_failure_target": ""
+    }, 
+"alterations": [{"type": "fault_injection", "value": {"inject_on_skill": "recharge", "inject_event": "set_sitting", "inject_resource": "spot_state"}}], 
+"plan_initial": ["init_power", "standup", "go_to", "take_picture", "go_to", "sitdown", "recharge", "standup", "go_to", "sitdown", "safe_poweroff"], 
+"skill_executions": [
+    {"skill": "init_power", "success": true, "step_index": 0, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "take_picture", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 5, "replan_index": 0}, 
+    {"skill": "recharge", "success": true, "step_index": 6, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 8, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 9, "replan_index": 0}, 
+    {"skill": "safe_poweroff", "success": true, "step_index": 10, "replan_index": 0}], 
+"replans": [], 
+"robust_skills_triggered": [], 
+"outcome": {"success": true, "final_replan_count": 0, "reason": ""}, 
+"timestamp": "2026-03-04T16:24:54.622624Z", 
+"duration_sec": 29.333281993865967 
+}
+
+{
+"run_id": "1772637924_164428", 
+"batch_type": "fault_injection", 
+"config": {
+        "executor": "manager",
+        "pddl_model_folder": 0,
+        "fault_injection_enabled": true,
+        "fault_injection_params": {
+            "inject_on_skill": "take_picture",
+            "inject_event": "set_poweroff",
+            "inject_resource": "motor_state"
+        },
+        "skill_failure_mode": "none",
+        "skill_failure_target": ""
+    }, 
+"alterations": [{"type": "fault_injection", "value": {"inject_on_skill": "take_picture", "inject_event": "set_poweroff", "inject_resource": "motor_state"}}], 
+"plan_initial": ["init_power", "standup", "go_to", "take_picture", "go_to", "sitdown", "recharge", "standup", "go_to", "sitdown", "safe_poweroff"], 
+"skill_executions": [
+    {"skill": "init_power", "success": true, "step_index": 0, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "take_picture", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "recharge", "success": true, "step_index": 5, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 6, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 8, "replan_index": 0}, 
+    {"skill": "safe_poweroff", "success": true, "step_index": 9, "replan_index": 0}], 
+"replans": [], 
+"robust_skills_triggered": [
+    {"skill": "init_power", "step_index": 4, "enablement_path": ["init_power", "standup"], "success": true}, 
+    {"skill": "standup", "step_index": 4, "enablement_path": ["init_power", "standup"], "success": true}], 
+"outcome": {"success": true, "final_replan_count": 0, "reason": ""}, 
+"timestamp": "2026-03-04T16:25:24.164575Z", 
+"duration_sec": 29.5319766998291 
+}
+
+{
+"run_id": "1772637953_658221", 
+"batch_type": "fault_injection", 
+"config": {
+        "executor": "manager",
+        "pddl_model_folder": 0,
+        "fault_injection_enabled": true,
+        "fault_injection_params": {
+            "inject_on_skill": "take_picture",
+            "inject_event": "set_sitting",
+            "inject_resource": "spot_state"
+        },
+        "skill_failure_mode": "none",
+        "skill_failure_target": ""
+    }, 
+"alterations": [{"type": "fault_injection", "value": {"inject_on_skill": "take_picture", "inject_event": "set_sitting", "inject_resource": "spot_state"}}], 
+"plan_initial": ["init_power", "standup", "go_to", "take_picture", "go_to", "sitdown", "recharge", "standup", "go_to", "sitdown", "safe_poweroff"], 
+"skill_executions": [
+    {"skill": "init_power", "success": true, "step_index": 0, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "take_picture", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "recharge", "success": true, "step_index": 5, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 6, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 8, "replan_index": 0}, 
+    {"skill": "safe_poweroff", "success": true, "step_index": 9, "replan_index": 0}], 
+"replans": [], 
+"robust_skills_triggered": [
+    {"skill": "standup", "step_index": 4, "enablement_path": ["standup"], "success": true}], 
+"outcome": {"success": true, "final_replan_count": 0, "reason": ""}, 
+"timestamp": "2026-03-04T16:25:53.658348Z", 
+"duration_sec": 29.483059644699097 
+}

@@ -1,0 +1,31 @@
+{
+"run_id": "1772636839_074621", 
+"batch_type": "nominal", 
+"config": {
+        "executor": "manager",
+        "pddl_model_folder": 0,
+        "fault_injection_enabled": false,
+        "fault_injection_params": {},
+        "skill_failure_mode": "none",
+        "skill_failure_target": ""
+    }, 
+"alterations": [], 
+"plan_initial": ["init_power", "standup", "go_to", "take_picture", "go_to", "sitdown", "recharge", "standup", "go_to", "sitdown", "safe_poweroff"], 
+"skill_executions": [
+    {"skill": "init_power", "success": true, "step_index": 0, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 1, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 2, "replan_index": 0}, 
+    {"skill": "take_picture", "success": true, "step_index": 3, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 4, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 5, "replan_index": 0}, 
+    {"skill": "recharge", "success": true, "step_index": 6, "replan_index": 0}, 
+    {"skill": "standup", "success": true, "step_index": 7, "replan_index": 0}, 
+    {"skill": "go_to", "success": true, "step_index": 8, "replan_index": 0}, 
+    {"skill": "sitdown", "success": true, "step_index": 9, "replan_index": 0}, 
+    {"skill": "safe_poweroff", "success": true, "step_index": 10, "replan_index": 0}], 
+"replans": [], 
+"robust_skills_triggered": [], 
+"outcome": {"success": true, "final_replan_count": 0, "reason": ""}, 
+"timestamp": "2026-03-04T16:07:19.074715Z", 
+"duration_sec": 29.331326723098755 
+}
