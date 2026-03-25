@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>deliberative_layer</name>
+  <version>0.0.0</version>
+  <description>Deliberative layer: FF planning, sends plan to skill execution manager, re-plans on failure (max 3 retries).</description>
+  <maintainer email="anonymous@example.com">anonymous</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+
+  <depend>rclpy</depend>
+  <depend>skill_execution_manager</depend>
+  <depend>test_campaign_msgs</depend>
+  <depend>ament_index_python</depend>
+  <exec_depend>quadruped_impl</exec_depend>
+  <exec_depend>fault_injection</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
