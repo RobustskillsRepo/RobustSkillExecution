@@ -1,0 +1,18 @@
+fault_injection_node:
+  ros__parameters:
+    skillset_manager: "quadruped_example"
+    target_node: "quadruped_example"
+    # trigger_mode: "on_skill_response" | "timer" | "manual"
+    trigger_mode: "on_skill_response"
+    # Inject fault when this skill completes
+    inject_on_skill: "standup"
+    # Event to inject (set_standing | set_sitting | set_poweroff | set_poweron)
+    # Events have guards - e.g. set_poweroff requires motor_state==On
+    inject_event: "set_poweroff"
+    # If use_parameters: true, use ROS2 params (quadruped_impl_node_debug only)
+    use_parameters: false
+    inject_param_motor_state: "Off"
+    inject_param_spot_state: "Sitting"
+    # Delay before injecting (seconds) - gives manager time to advance
+    inject_delay_sec: 0.5
+    randomize: false

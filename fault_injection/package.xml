@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>fault_injection</name>
+  <version>0.1.0</version>
+  <description>Optional ROS2 node to inject faults (resource changes) during mission execution for testing robust behavior.</description>
+  <maintainer email="anonymous@example.com">anonymous</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>quadruped_example_skillset_interfaces</depend>
+  <depend>rcl_interfaces</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
