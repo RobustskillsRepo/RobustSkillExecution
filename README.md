@@ -1,4 +1,4 @@
-# Robust Skill Execution for Autonomous Robots [![DOI](https://zenodo.org/badge/1191780227.svg)](https://doi.org/10.5281/zenodo.19680608)
+# Robust Skill Execution for Autonomous Robots
 
 
-This is a simple source code repo for ECSA2026 reviewers.
+This is a simple source code repo for the **Robust Skill Execution for Autonomous Robots** proceeding.
